@@ -6,6 +6,7 @@
 
 body {
   height: 100vh;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,13 +14,19 @@ body {
 }
 
 .container {
-  width: 70%;
-  height: 90%;
+  width: 750px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #ffc2c1;
-  box-shadow: 0px 5px 10px black;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.1), 5px 5px 1px rgba(0, 0, 0, 0.1),
+    10px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 .box1 {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +40,8 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   background-color: #bbb1ec;
   border-radius: 10px;
-  box-shadow: 0px 5px 10px;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.1), 5px 5px 1px rgba(0, 0, 0, 0.1),
+    10px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 .container h3 {
@@ -45,6 +53,7 @@ body {
 
 .box2 {
   margin-top: 20px;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
@@ -53,7 +62,8 @@ body {
   padding: 4px 10px;
   background-color: #bbb1ec;
   border: none;
-  box-shadow: 0px 5px 10px black;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.1), 5px 5px 1px rgba(0, 0, 0, 0.1),
+    10px 10px 1px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
@@ -61,8 +71,7 @@ body {
 }
 
 #input {
-  width: 50%;
-  border: 3px solid black;
+  width: 300px;
   text-align: center;
   border-top: none;
   border-left: none;
@@ -73,14 +82,20 @@ body {
 
 .box3 {
   margin-top: 20px;
-  height: 48%;
+  width: 100%;
+  height: 100%;
   overflow-y: scroll;
 }
 
+.box3::-webkit-scrollbar {
+  display: none;
+}
+
 .listitem {
+  width: 100%;
   margin-top: 5px;
   margin-left: 10px;
-  padding: 5px 32px;
+  padding: 5px 37px;
   list-style-position: inside;
   background-image: url(image/image2.png);
   background-position: left center;
@@ -90,16 +105,70 @@ body {
   text-transform: capitalize;
   font-weight: bold;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.box4{
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
 }
 
 .button {
-  margin: 0px 0px 0px 30px;
   padding: 5px 20px;
   background-color: #bbb1ec;
   border: none;
-  box-shadow: 0px 5px 10px black;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.1), 5px 5px 1px rgba(0, 0, 0, 0.1),
+    10px 10px 1px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 530px) {
+  .box1 h1 {
+    font-size: 25px !important;
+  }
+  #input {
+    width: 200px !important;
+  }
+  .box2 button {
+    letter-spacing: 0px !important;
+    padding: 5px 5px !important;
+  }
+  .box4{
+    margin-top: 10px;
+    width: 100%;
+  }
+  .listitem{
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .box1 h1 {
+    font-size: 20px !important;
+  }
+  #input {
+    margin-top: 10px;
+    width: 300px !important;
+  }
+  .box2 {
+    flex-wrap: wrap !important;
+  }
+  .box2 button {
+    margin-top: 10px;
+    letter-spacing: 0px !important;
+    padding: 5px 3px !important;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  #input {
+    width: 260px !important;
+  }
 }
